@@ -1,0 +1,515 @@
+/* FONTS */
+
+@font-face {
+	font-family: 'Shentox-SemiBold';
+	src: url('/fonts/Shentox/Shentox-SemiBold.otf')
+}
+@font-face {
+	font-family: 'Shentox-SemiBoldItalic';
+	src: url('/fonts/Shentox/Shentox-SemiBoldItalic.otf')
+}
+@font-face {
+	font-family: 'Shentox-Medium';
+	src: url('/fonts/Shentox/Shentox-Medium.otf')
+}
+
+@font-face {
+	font-family: 'Shentox-Bold';
+	src: url('/fonts/Shentox/Shentox-Bold.otf')
+}
+
+@font-face {
+	font-family: 'Shentox-RegularItalic';
+	src: url('/fonts/Shentox/Shentox-RegularItalic.otf')
+}
+/* ==========================================================================
+   Generic Styles
+   ========================================================================== */
+   * { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+ body {font-family: "klavika-web";}  
+.cap {text-transform: uppercase;}
+.underline {text-decoration: underline;}
+.italic {font-style: italic;}
+.text-right {text-align: right;}
+.text-center {text-align: center;}
+.bold {font-weight: 600;}
+
+.white {color:#fff;}
+.lt-grey {color:#c8c8c8;}
+.md-grey {color:#8c827b;}
+.black {color:#101820;}
+.red {color:#de2625;}
+
+.no-pad {padding:0;}
+.no-marg {margin:0;}
+
+ul li {list-style: none;}
+
+.m-top2 {margin-top: 2%;}
+.m-top5 {margin-top: 5%;}
+
+.width-max {max-width: 1185px; margin:0 auto;}
+
+.bkg-red-slant {
+	position: absolute; 
+	top:158px;
+	left:25%;
+	width: 36%;
+	height: 76.5%;
+	min-height: 59%;
+	display: block;
+	-webkit-transform: skew(-40deg);
+	-moz-transform: skew(-40deg);
+	-o-transform: skew(-40deg);
+	transform: skew(-40deg);
+	background: rgba(220,39,46,0.9);
+	z-index: 1; 
+	 }
+.grey-slant:before {content:""; display: block; height:40px; width: 175%; position: absolute; top:0; left: -72%;
+	-webkit-transform: skew(-20deg);
+	-moz-transform: skew(-20deg);
+	-o-transform: skew(-20deg);
+	transform: skew(-20deg);
+	background: #df2626;
+	z-index: -1;
+	text-align: center;
+}
+.grey-slant {position: relative; z-index: 1; padding:7px 0; margin-top: 0px;}
+
+.black-slant:before {content:""; display: block; height:30px; width: 100%; position: absolute; top:0; left: -9%;
+
+}
+.black-slant {position: relative; z-index: 1; overflow: hidden; margin-top:2%; padding-left: 2%; font-weight: 600;}
+
+.navbar-top {margin:0px; padding:0px;}
+	.navbar .container {padding:0px; width: 95%;}
+address {font-weight: 600; margin: 1% 0 10px 0;float: left;}
+.logo {margin:1% 0 0 0; }
+	.logo img {width:auto; height: 100%; margin:0 auto; display: block;}
+#top-nav {margin-top: 3%;}
+	#top-nav ul {display: block; padding:0px;}
+		#top-nav ul li {display: block; float: right; list-style: none; font-weight: 400; font-size: 1.5vw;}
+		@media all and (max-width:835px) {
+			#top-nav ul li {margin-left:0; text-align: center;}
+		}
+
+.jumbotron {position: relative; background:#fff;}
+
+	.jumbotron blockquote {position: relative; z-index: 15; font-size: 48px; line-height: 1em; font-weight: 600; border:none; max-width: 1185px; margin:0 auto; float: none;}
+		.jumbotron blockquote span {width: 100%; display: block; font-size: 28px; font-weight: 100;}
+	.jumbotron h1 {font-size: 76px; position: relative; z-index:100; color:#fff; padding-left: 40%; font-weight: 600;}
+	.jumbotron h1 sup {font-size:50%; top:-0.65em;}
+	.jumbotron h2 {font-size: 68px; position: relative;z-index: 100; padding-left: 3%; font-weight: 600;}
+		.jumbotron h2 sub {bottom:0; font-size: 50%; font-weight: 600;}
+		
+
+.car-bkg {
+	width:100%;
+	min-height: 670px; 
+	background-image: url('/img/background-bigger.png');
+	background-size: 100%;
+	background-repeat: no-repeat;        
+        webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover; 
+}
+
+#MALIBU .car-bkg:after {content:""; background: url('../img/malibu.png') no-repeat right center; background-size:auto 100%; display: block; width: 100%; min-height: 377px; position: absolute; top:275px; right: 0px; z-index: 3;}
+
+#CRUZE .car-bkg:after {content:""; background: url('../img/cruze.png') no-repeat right center; background-size:auto 100%; display: block; width: 100%; min-height: 377px; position: absolute; top:275px; right: 0px; z-index: 3;}
+
+#EQUINOX .car-bkg:after {content:""; background: url('../img/equinox.png') no-repeat right center; background-size:auto 100%; display: block; width: 100%; min-height: 377px; position: absolute; top:275px; right: 0px; z-index: 3;}
+
+#TRAVERSE .car-bkg:after {content:""; background: url('../img/traverse.png') no-repeat right center; background-size:auto 100%; display: block; width: 100%; min-height: 377px; position: absolute; top:275px; right: 0px; z-index: 3;}
+
+#VOLT .car-bkg:after {content:""; background: url('../img/volt.png') no-repeat right center; background-size:auto 100%; display: block; width: 100%; min-height: 377px; position: absolute; top:275px; right: 0px; z-index: 3;}
+#VOLT .mpg {margin-top: 0;}
+#VOLT .mpg p {text-align: left; font-size: 25px;}
+
+.key-features {position: relative;}
+.key-features ul {font-size: 18px; line-height: 1em; font-weight: 600;}
+	.key-features ul li {padding-bottom: 10px;}
+.mpg {margin-top: 6%;}
+	.mpg p {font-size: 18px; font-weight: 600;}
+	
+#ajax_form {min-width: 197px; background: rgba(0,31,96,5); -webkit-border-radius: 10px; -moz-border-radius: 10px; border-radius: 10px; padding:3%; max-width: 225px; margin-top: 47%; margin-left: 20%; height: 330px;}
+	#ajax_form input {width: 100%;  -webkit-border-radius: 2px; -moz-border-radius: 2px; border-radius: 2px; margin-bottom: 12px; border:none; color:#C8C8C8; padding:6px; line-height: 1em;}
+	#ajax_form .personal-quote {font-size: 18px; margin:0px; padding-bottom: 15px;}
+	#ajax_form .phone {font-size: 30px;}
+	#ajax_form .btn {max-width: 67%; margin-left: 16%;-webkit-transform: skew(-40deg);-moz-transform: skew(-40deg);-o-transform: skew(-40deg);transform: skew(-40deg);background:#ff252d; padding:4px 12px; font-weight: 600; color:#fff; -webkit-border-radius: 2px; -moz-border-radius: 2px; border-radius: 2px;}
+		#ajax_form .btn:hover {background:#297add;}
+		/*#ajax_form .btn {border-width:2px; border-style: groove; border-image: radial-gradient(#00369E, #297ADD) 20% round; -webkit-border-image: radial-gradient(#00369E, #297ADD) 20% round; -o-border-image: radial-gradient(#00369E, #297ADD) 20% round; } */
+
+.directions p {font-size: 18px; line-height: 1em; padding-left: 10px;}
+.directions h4 {font-size: 24px; margin:0px; padding: 10px 0 0 10px; overflow: visible;}
+.red-stripe {background:url('../img/red-stripe.png') no-repeat 0px 0px;}
+
+.map-img {display: block; width:100%; height:auto;}
+
+
+footer {font-size: 14px; margin-top: 30px;}
+
+
+.typekit-badge {display: none !important;}
+
+@media all and (max-width: 765px) {
+	.car-bkg {min-height:inherit; display: table;}
+	.car-bkg:after {content: ""; background:none !important;}
+	.bkg-red-slant {	max-height: 68%; min-height: inherit;}
+	/* Relative WIdth Font SIzes */
+		.jumbotron h1 {font-size: 17vw;}
+		.jumbotron p {font-size: 3.5vw;}
+		.jumbotron h2 {font-size: 13vw;}
+		.jumbotron blockquote {font-size: 9vw;}
+			.jumbotron blockquote span {font-size: 6vw; text-align: left !important;}
+		#ajax_form .personal-quote {font-size:4vw;}
+		#top-nav ul li {font-size:4vw;}
+}
+@media all and (max-width: 991px) {
+	.car-bkg {min-height:inherit; display: table;}
+	.car-bkg:after {content: ""; background:none !important;}
+	}
+	
+	
+.offer-heading {
+	margin-left: 35%;
+	margin-top: 20.5%;
+	margin-bottom: 0px;
+}
+
+.name-heading {
+	margin-top: -7.5%;
+}
+
+.bkg-blue-slant {
+	position: absolute; 
+	top:41px;
+	left:35%;
+	width: 69%;
+	height: 93.8%;
+	min-height: 59%;
+	display: block;
+	-webkit-transform: skew(40deg);
+	-moz-transform: skew(40deg);
+	-o-transform: skew(40deg);
+	transform: skew(40deg);
+	background: rgba(39,84,171,0.9);
+	z-index: 0; 
+}
+
+.text-inverse {
+	-webkit-transform: skew(-40deg);
+	-moz-transform: skew(-40deg);
+	-o-transform: skew(-40deg);
+	transform: skew(-40deg);
+}
+
+.text-inverse-red {
+	-webkit-transform: skew(40deg);
+	-moz-transform: skew(40deg);
+	-o-transform: skew(40deg);
+	transform: skew(40deg);
+}
+
+.top-tele {
+	font-family: 'Shentox-SemiBoldItalic';
+	font-size: 25pt;
+	color: #001f60;
+}
+
+.top-get {
+	font-family: 'Shentox-SemiBoldItalic';
+	font-size: 16pt;
+	color: #de2625;
+	margin-bottom: -16px;
+	margin-top: 12px;
+}
+
+.top-location {
+	font-family: 'Shentox-Medium';
+}
+
+.text-better {
+	font-family: 'Shentox-Bold';
+	white-space: nowrap;
+	color: white;
+	font-size: 62pt;
+	margin-top: -4px;
+	padding-bottom: 52px;
+	line-height: .8;
+}
+
+.text-car-name {
+	font-family: 'Shentox-Bold';
+	color: white;
+	font-size: 101pt;
+	padding-left: 28px;
+	margin-top: -49px;
+}
+
+.text-lt {
+	font-family: 'Shentox-Bold';
+	color: white;
+	font-size: 56pt;
+	margin-top: -169px;
+	padding-left: 394px;
+	padding-bottom: 69px;
+}
+
+.text-offer {
+	font-family: 'Shentox-Bold';
+	color: white;
+	font-size: 27pt;
+	padding-left: 105px;
+	margin-top: -43px;
+}
+
+.text-monthly {
+	font-family: 'Shentox-Bold';
+	color: white;
+	font-size: 62pt;
+	padding-left: 150px;
+	margin-top: -20px;
+}
+
+.text-michigan {
+	font-family: 'Shentox-SemiBold';
+	font-size: 25pt;
+	color: #001f60;
+	line-height: 1;
+	padding-bottom: 10px;
+}
+
+.text-terms {
+	font-family: 'Shentox-RegularItalic';
+	font-size: 7pt;
+	color: gray;
+}
+
+.text-detroit {
+	font-family: 'Shentox-Bold';
+	font-size: 50pt;
+	color: #df2626;
+	line-height: .8;
+}
+
+.text-features {
+	font-family: 'Shentox-Medium';
+	font-size: 14pt;
+	color: #001f60;
+}
+
+.text-features-title {
+	font-family: 'Shentox-SemiBold';
+	padding-top: 3px;
+	padding-left: 37.5%;
+}
+
+.features-padding {
+	padding-top: 2%;
+}
+
+.text-directions-header {
+	font-family: 'Shentox-Bold';
+	font-size: 24pt;
+	color: #001f60;
+}
+
+.text-directions {
+	font-family: 'Shentox-RegularItalic';
+}
+
+.text-selection {
+	font-family: 'Shentox-Bold';
+	color: #dbe0ee;
+	font-size: 20pt;
+	margin-top: -39px;
+	margin-left: 247px;
+	padding-bottom: 52px;
+	line-height: .8;
+}
+/* ### MOBILE ## */
+
+.mobile-bkg-blue-slant {
+	position: absolute; 
+	top:29px;
+	left:30%;
+	width: 77%;
+	height: 87.8%;
+	display: block;
+	-webkit-transform: skew(40deg);
+	-moz-transform: skew(40deg);
+	-o-transform: skew(40deg);
+	transform: skew(40deg);
+	background: rgba(39,84,171,0.9);
+	z-index: 0; 
+}
+
+.mobile-car {
+	padding-top: 100px;
+	padding-bottom:	25px;
+}
+
+.mobile-text-better {
+	font-family: 'Shentox-Bold';
+	color: white;
+	font-size: 18pt;
+	margin-top: -1px;
+	margin-left: -12px;
+	padding-bottom: 52px;
+	line-height: .8;
+}
+
+.mobile-text-selection {
+	font-family: 'Shentox-Bold';
+	color: #dbe0ee;
+	font-size: 8pt;
+	margin-top: -39px;
+	margin-left: 7px;
+	padding-bottom: 52px;
+	line-height: .8;
+}
+
+.mobile-bkg-red-slant {
+	position: absolute; 
+	top: 93%;
+	width: 77%;
+	height: 29.5%;
+	display: block;
+	-webkit-transform: skew(-40deg);
+	-moz-transform: skew(-40deg);
+	-o-transform: skew(-40deg);
+	transform: skew(-40deg);
+	background: rgba(220,39,46,0.9);
+	z-index: 1; 
+}
+
+.mobile-text-car-name {
+	font-family: 'Shentox-Bold';
+	color: white;
+	font-size: 24pt;
+	padding-left: 29px;
+	margin-top: -11px;
+}
+
+.mobile-text-lt {
+	font-family: 'Shentox-Bold';
+	color: white;
+	font-size: 17pt;
+	margin-top: -42px;
+	padding-left: 94px;
+	padding-bottom: 69px;
+}
+
+.mobile-text-offer {
+	font-family: 'Shentox-Bold';
+	color: white;
+	font-size: 10pt;
+	padding-left: 27px;
+	margin-top: -68px;
+}
+
+.mobile-text-monthly {
+	font-family: 'Shentox-Bold';
+	color: white;
+	font-size: 15pt;
+	padding-left: 47px;
+}
+
+/* ## FORM STYLING ## */
+
+.form-text {
+	font-family: 'Shentox-SemiBold';
+}
+
+.quote-form {
+	z-index: 99;
+}
+
+.claim-button {
+	font-family: 'Shentox-Bold';
+	border: solid;
+	border-color: #fff;
+}
+
+.claim-disclaimer-text{
+	font-family: 'Shentox-RegularItalic';
+	color:	#fff;
+	font-size: 9.5pt;
+	padding-top: 50px;
+}
+
+/* ## EQUINOX SPECIFIC STYLING */
+
+.equinox-car-name {
+	font-family: 'Shentox-Bold';
+	color: white;
+	font-size: 101pt;
+	padding-left: 28px;
+	margin-top: -49px;
+}
+
+
+.mobile-equinox-car-name {
+	font-family: 'Shentox-Bold';
+	color: white;
+	font-size: 24pt;
+	padding-left: 29px;
+	margin-top: -11px;
+}
+
+.mobile-equinox-lt {
+	font-family: 'Shentox-Bold';
+	color: white;
+	font-size: 17pt;
+	margin-top: -42px;
+	padding-left: 111px;
+	padding-bottom: 69px;
+}
+.equinox-lt{
+	font-family: 'Shentox-Bold';
+	color: white;
+	font-size: 56pt;
+	margin-top: -169px;
+	padding-left: 465px;
+	padding-bottom: 69px;
+}
+
+.equinox .bkg-red-slant {width:40%;}
+
+/* ## TRAVERESE SPECIFIC STYLING ## */
+
+.traverse-car-name {
+	font-family: 'Shentox-Bold';
+	color: white;
+	font-size: 80pt;
+	padding-left: 39px;
+	margin-top: -38px;
+}
+
+
+.mobile-traverse-car-name {
+	font-family: 'Shentox-Bold';
+	color: white;
+	font-size: 24pt;
+	padding-left: 29px;
+	margin-top: -11px;
+}
+
+.mobile-traverse-lt {
+	font-family: 'Shentox-Bold';
+	color: white;
+	font-size: 17pt;
+	margin-top: -42px;
+	padding-left: 121px;
+	padding-bottom: 69px;
+}
+.traverse-lt{
+	font-family: 'Shentox-Bold';
+	color: white;
+	font-size: 44pt;
+	margin-top: -132px;
+	padding-left: 403px;
+	padding-bottom: 69px;
+}
